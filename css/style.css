@@ -1,5 +1,17 @@
 body {
-    background-color: blanchedalmond;
-    color: cornflowerblue;
+    background-color:#7FAD8B;
+    color: black;
+    font-family: 'Andika', sans-serif; line-height: 1.6; margin: 0; padding: 0;
 }
 
+h1 { font-family: 'Girassol', serif; text-transform: capitalize; letter-spacing: 1px; }
+
+
+
+h1 {
+  text-align: center;
+}
+
+p.a {
+  text-align: center;
+}

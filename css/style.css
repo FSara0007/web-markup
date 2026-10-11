@@ -153,3 +153,10 @@ header {
     text-decoration: none;
     border-radius: 0.5rem;
 }
+
+
+
+input, textarea {
+   display: block;
+   box-sizing: border-box;
+}

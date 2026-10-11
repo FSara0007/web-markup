@@ -17,3 +17,57 @@
 
 </header>
 
+
+<h1>Contact Us!</h1>
+
+<form action="http://next-app-router-playground-kohl.vercel.app/api/contact" method="post">
+      <p>
+        <label for="name">First Name*:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="2"
+          maxlength="50"
+          placeholder="Julia"
+     
+        <label for="lastname">Last Name:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          required
+          minlength="2"
+          maxlength="50"
+          placeholder="Sims"
+        />
+      </p>
+
+
+<p>
+        <label for="email">Email*:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="your.email@example.com"
+        />
+      </p>
+
+      <p>
+        <label for="message">Your Message*:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          required
+          minlength="10"
+          maxlength="500"
+          placeholder="I wanted to ask about..."
+        ></textarea>
+      </p>
+ <button type="submit">Submit</button>
+ </form>
+
+</body>

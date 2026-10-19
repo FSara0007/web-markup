@@ -1,14 +1,41 @@
+
+
+/* Style for the navigation menu on phone or portrait tablet*/
+@media screen and (min-width: 300px) 
+{
+    header{
+        background-color: white;
+    }
+     nav {
+        background-color: rgb(239, 234, 234);
+        height: 40px;
+        }
+}
+/*end of phone styles*/
+
+
+/* Style for the navigation menu on desktop or landscape tablet*/
+@media screen and (min-width: 900px) {
 header {
     background-color: white;
     padding: 1rem;
 }
+nav {
+     background-color: rgb(239, 234, 234);
+    height: 40px;
+    }
+ ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    }
 
-header img {
-    width: 12rem;
-    height: auto;
+
 }
-
-
+/*end of desktop styles*/
+   
 
 figure img {
     width: 100%;
@@ -22,24 +49,15 @@ figure {
 }
 
 
+
+h1 { text-align: center; font-family: 'Girassol', serif; text-transform: uppercase; letter-spacing: 1px; }
+
+
 body {
     background-color:#7FAD8B;
     color: black;
     font-family: 'Andika', sans-serif; line-height: 1.6; margin: 0; padding: 0;
 }
-
-h1 { font-family: 'Girassol', serif; text-transform: uppercase; letter-spacing: 1px; }
-
-
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-    margin-left: 3rem;
-}
-
 
 p.a {
   max-width: 40rem;
@@ -99,12 +117,6 @@ p {
     padding: 0 1rem;
 }
 
-@media (max-width: 40em) {
-    body {
-        font-size: 0.9rem;
-    }
-}
-
 
 header {
     display: flex;
@@ -147,7 +159,7 @@ header {
 
 .plant-box a {
     display: inline-block;
-    background-color: #065143;
+    background-color: #A1CCAC;
     color: white;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -159,4 +171,251 @@ header {
 input, textarea {
    display: block;
    box-sizing: border-box;
+}
+
+
+header img {
+    width: 12rem;
+    height: auto;
+}
+
+/*Styles for Beginner Plants*/
+.plant-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.plant-list {
+    flex: 2;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.plant-card2 {
+    background-color: #A5CCAD;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+        "title image"
+        "text  image";
+    gap: 0 10px;
+    align-items: start;
+}
+
+.plant-card2 h3 {
+    grid-area: title;
+    margin-bottom: 0;
+}
+
+.plant-card2 p {
+    grid-area: title;
+    margin-top: 40px;
+}
+
+.plant-card2 img {
+    grid-area: image;
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.plant-card2 h3,
+.info-box h3 {
+    margin-top: 0;
+}
+
+
+.plant-sidebar {
+    flex: 1;
+}
+
+.info-box {
+    background-color: #FFD95C;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 22px;
+    height: 500px;
+}
+
+
+.plant-card2 p,
+.info-box p {
+    text-indent: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+/* Contact page */
+.contact-page {
+    padding: 20px;
+}
+
+.contact-page h1 {
+    text-align: center;
+    color: #black;
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* The green form box */
+.contact-box {
+    background-color: #A5CCAD;
+    padding: 25px;
+    border-radius: 22px;
+    width: 100%;
+    max-width: 550px;
+    margin-left: 5%;
+    box-sizing: border-box;
+}
+
+/* Form labels */
+.contact-box label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* Text fields */
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #789C80;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Message box */
+.contact-box textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+.name-fields {
+    display: flex;
+    gap: 15px;
+}
+
+.name-fields p {
+    flex: 1;
+    min-width: 0;
+}
+
+.name-fields input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name-fields label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 500px) {
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+
+/* Submit button */
+.contact-box button {
+    background-color: #315B3B;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-box button:hover {
+    background-color: #24452D;
+}
+
+/* Make the form fit on smaller screens */
+@media (max-width: 600px) {
+    .contact-box {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .contact-page {
+        padding: 12px;
+    }
+}
+
+/* The big box around EVERYTHING */
+.contact-outer-box {
+    background-color: #A5CCAD;
+    padding: 0px;
+    border-radius: 22px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+/* Heading and introduction */
+.contact-intro-box {
+    background-color: #FFD95C;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.contact-intro-box h1 {
+    text-align: center;
+    color: #000000;
+    margin-top: 0;
+}
+
+.contact-intro-box p {
+    line-height: 1.6;
+    margin-bottom: 2;
+}
+
+/* The form inside the big box */
+.contact-box {
+    background-color: #A5CCAD;
+    padding: 25px;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.faq-box {
+width: 800px; 
+height: 300px; 
+background-color: #A5CCAD; 
+border: solid #62846B; 
+border-width: 70px 25px 25px 25px;
+margin-left: auto; 
+margin-right: auto; 
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .contact-outer-box {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 12px;
+    }
 }

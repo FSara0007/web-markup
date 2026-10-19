@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
+    <link rel="icon" type="image/png" href="img/favicon-removebg-preview.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Andika&family=Gabriela&family=Girassol&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -16,58 +19,92 @@
          </a>
 
 </header>
+<nav id = mainnav>
+    <ul>
+       <li><a href="index.html">Home</a></li>
+        <li><a href="plants.html">Beginner Plants</a></li>
+        <li><a href="edible.html">Edible Plants</a></li>
+        <li><a href="indoor.html">Indoor Garden</a></li>
+        <li><a href="problems.html">Common problems</a></li>
+    </ul>
 
 
-<h1>Contact Us!</h1>
+<main class="contact-page">
 
-<form action="http://next-app-router-playground-kohl.vercel.app/api/contact" method="post">
-      <p>
-        <label for="name">First Name*:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          minlength="2"
-          maxlength="50"
-          placeholder="Julia"
-     
-        <label for="lastname">Last Name:</label>
-        <input
-          type="text"
-          id="lastname"
-          name="lastname"
-          required
-          minlength="2"
-          maxlength="50"
-          placeholder="Sims"
-        />
-      </p>
+    <section class="contact-outer-box">
+
+        <!-- Heading and introduction -->
+        <section class="contact-intro-box">
+            <h1>CONTACT US!</h1>
+
+            <p>
+                Do you have questions, suggestions or just want to reach out?
+                This website grows and improves thanks to the feedback of our
+                readers, so we’d love to hear from you! Fill out the form below
+                and we’ll respond within 24 hours.
+            </p>
+        </section>
+
+        <!-- Form -->
+        <section class="contact-box">
+            <form action="http://next-app-router-playground-kohl.vercel.app/api/contact"
+                  method="post">
+
+                <section class="name-fields">
+                    <p>
+                        <label for="name">First Name*:</label>
+                        <input type="text" id="name" name="name"
+                               required minlength="2" maxlength="50"
+                               placeholder="Julia">
+                    </p>
+
+                    <p>
+                        <label for="lastname">Last Name*:</label>
+                        <input type="text" id="lastname" name="lastname"
+                               required minlength="2" maxlength="50"
+                               placeholder="Sims">
+                    </p>
+                </section>
+
+                <p>
+                    <label for="email">Email*:</label>
+                    <input type="email" id="email" name="email"
+                           required placeholder="your.email@example.com">
+                </p>
+
+                <p>
+                    <label for="message">Your Message*:</label>
+                    <textarea id="message" name="message"
+                              required minlength="10" maxlength="500"
+                              placeholder="I wanted to ask about..."></textarea>
+                </p>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+    </section>
 
 
+  
+<h1>Frequently Asked Questions:</h1>
+
+    <section class="faq-box"> 
 <p>
-        <label for="email">Email*:</label><br />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="your.email@example.com"
-        />
-      </p>
+Q: I haven’t gotten any reply back, why is that?
+</p>
+A: We always reply withing 24 hours so if you haven’t gotten a reply, make sure you filled in the right email.
+<p>
+Q:Are you planning to add guides for more challenging plants?
+</p>
+A: For now our team is focusing of expanding our guides for beginners, but that can happen in future
+<p>
+Q: Can I request a topic for the website? 
+</p>
+A: Yes! We're always open to suggestions for new guides and topics. You can send us your idea through the contact form 
 
-      <p>
-        <label for="message">Your Message*:</label><br />
-        <textarea
-          id="message"
-          name="message"
-          required
-          minlength="10"
-          maxlength="500"
-          placeholder="I wanted to ask about..."
-        ></textarea>
-      </p>
- <button type="submit">Submit</button>
- </form>
 
-</body>
+    </section>
+
+</main>

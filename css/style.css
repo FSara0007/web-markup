@@ -757,7 +757,12 @@ figure img {
 
 
 
-/* Link after it has been visited */
+/* Links*/
+
+a:link {
+    color: black;
+}
+
 a:visited {
     color: #37664c;
 }

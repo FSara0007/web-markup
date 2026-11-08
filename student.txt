@@ -1,5 +1,5 @@
 Student name: Sara Figa
-Student number: your student number
-Student class: your class
+Student number: 761361
+Student class: HAIT26FT1A
 GitHub Repository: https://github.com/FSara0007/web-markup
-GitHub Pages URL: https://github.com/FSara0007/web-markup/deployments?environment=github-pages#activity-log
+GitHub Pages URL: https://fsara0007.github.io/web-markup/

@@ -1,81 +1,180 @@
 
+/* =================================
+   1. GENERAL STYLES
+================================= */
 
-/* Style for the navigation menu on phone or portrait tablet*/
-@media screen and (min-width: 300px) 
-{
-    header{
-        background-color: white;
-    }
-     nav {
-        background-color: rgb(239, 234, 234);
-        height: 40px;
-        }
+* {
+    box-sizing: border-box;
 }
-/*end of phone styles*/
 
 
-/* Style for the navigation menu on desktop or landscape tablet*/
-@media screen and (min-width: 900px) {
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7FAD8B;
+    color: black;
+    font-family: 'Andika', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+
+p {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-indent: 1em;
+    word-spacing: 0.1em;
+    padding: 0 1rem;
+}
+
+input,
+textarea {
+    display: block;
+    box-sizing: border-box;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #666666;
+}
+
+.home-content p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+}
+/* =================================
+   2. HEADER AND NAVIGATION
+================================= */
+
 header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 }
+
+
+header .card-button {
+    top: 10px;
+    right: 10px;
+    margin: 0;
+}
+
+header img {
+    width: 12rem;
+    height: auto;
+}
+
 nav {
-     background-color: rgb(239, 234, 234);
-    height: 40px;
-    }
- ul {
+    background-color: rgb(239, 234, 234);
+    min-height: 40px;
+}
+
+nav > ul {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     list-style-type: none;
-    margin: 0px;
+    margin: 0;
     padding: 5px;
-    }
-
-
 }
-/*end of desktop styles*/
-   
 
-figure img {
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-    display: block;
+
+.page-title {
+    text-align: center;
+    padding: 20px 0;
 }
+
+.page-title h1 {
+    display: inline-block;
+    background-color: #FFD95C;
+    color: #065143;
+    font-family: 'Gabriela', serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+
+/* =================================
+   3. HERO IMAGE
+================================= */
 
 figure {
     margin: 0;
 }
 
-
-
-h1 { text-align: center; font-family: 'Girassol', serif; text-transform: uppercase; letter-spacing: 1px; }
-
-
-body {
-    background-color:#7FAD8B;
-    color: black;
-    font-family: 'Andika', sans-serif; line-height: 1.6; margin: 0; padding: 0;
+figure img {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
 }
 
-p.a {
-  max-width: 40rem;
-  margin: 0 auto;
-  text-align: center;
-  text-indent: 0;
+
+.hero {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    
 }
 
+.hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-title h1 {
+    background-color: #FFD95C;
+    color: #065143;
+    font-family: 'Gabriela', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    padding: 12px 24px;
+}
+
+/* =================================
+   4. HOMEPAGE: START SIMPLE CARD
+================================= */
 
 .plant-card {
     background-color: #065143;
+    color: white;
     max-width: 40rem;
-    height: 12rem;
     padding: 0.5rem 1rem;
-    margin: 3rem 0 3rem 3rem;
+    margin: 3rem auto;
     border-radius: 1rem;
     box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
-    
 }
 
 .plant-card h3 {
@@ -85,60 +184,81 @@ p.a {
 }
 
 .plant-card p {
-    text-indent: 0;
     color: white;
+    text-indent: 0;
     margin: 0.2rem 0;
     line-height: 1.2;
     max-width: 40rem;
     padding: 0;
 }
 
-.card-button {
-    display: inline-block;
+    .card-button {
+    display: block;
+    width: fit-content;
     background-color: #FFD95C;
     color: black;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 0.5rem;
-    margin-top: 0.5rem;
-    float: right;
+    border-radius: 30px;
+    margin: 1rem 0 0 auto;
 }
 
 .card-button:hover {
     background-color: #ffdf76;
-    color: white;
-}
-
-p {
-     max-width: 70rem;
-    line-height: 1.6;
-    text-indent: 1em;
-    word-spacing: 0.1em;
-    padding: 0 1rem;
+    color: black;
 }
 
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* =================================
+   HOMEPAGE: PLANT GUIDE CARDS AND BEGINNER PLANTS PAGE
+================================= */
 
 .plant-cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     margin: 3rem auto;
+    padding: 0 1rem;
+}
+.plant-card2 ul {
+    margin-top: 0;
+    padding-left: 1.5rem;
+    
+}
+
+.plant-card2 figure {
+    grid-area: image;
+    margin: 0;
+    min-width: 0;
+}
+
+.plant-card2 figure img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.plant-card2 figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 .plant-box {
+    display: block;
     background-color: #62846B;
     width: 16rem;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
     border-radius: 1rem;
     box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
+
+    /* Make the whole card clickable */
+    color: black;
+    text-decoration: none;
 }
 
 .plant-box img {
@@ -157,73 +277,83 @@ header {
     padding: 0;
 }
 
-.plant-box a {
-    display: inline-block;
-    background-color: #A1CCAC;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 0.5rem;
+/* Hover effect for the whole card */
+.plant-box:hover {
+    background-color: #A5CCAD;
+    transform: translateY(-3px);
 }
 
 
 
-input, textarea {
-   display: block;
-   box-sizing: border-box;
-}
+/* =================================
+   6. BEGINNER PLANTS PAGE
+================================= */
 
-
-header img {
-    width: 12rem;
-    height: auto;
-}
-
-/*Styles for Beginner Plants*/
 .plant-layout {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    max-width: 60rem;
+    gap: 1.5rem;
+    max-width: 80rem;
+    width: 90%;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 0;
 }
+
+.plant-description img {
+    float: left;
+    margin-right: 1rem;
+}
+
+
 
 .plant-list {
     flex: 2;
+    min-width: 0;
     background-color: white;
     padding: 0.5rem;
+     margin-left: 10rem;
+    margin-right: 2rem
+
 }
 
 .plant-card2 {
     background-color: #A5CCAD;
     padding: 0.8rem;
     margin-bottom: 0.8rem;
-
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: minmax(0, 1fr) 200px;
     grid-template-areas:
         "title image"
-        "text  image";
+        "text image";
     gap: 0 10px;
     align-items: start;
+    max-width: none;
+    box-sizing: border-box;
 }
 
 .plant-card2 h3 {
     grid-area: title;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
 .plant-card2 p {
-    grid-area: title;
-    margin-top: 40px;
+    grid-area: text;
+    margin-top: 0.5rem;
+    text-indent: 0;
+    padding: 0;
 }
 
 .plant-card2 img {
     grid-area: image;
-    width: 200px;
-    height: 400px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
+}
+
+.plant-sidebar {
+    flex: 1;
+    min-width: 0;
 }
 
 .plant-card2 h3,
@@ -231,19 +361,12 @@ header img {
     margin-top: 0;
 }
 
-
-.plant-sidebar {
-    flex: 1;
-}
-
 .info-box {
     background-color: #FFD95C;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 22px;
-    height: 500px;
 }
-
 
 .plant-card2 p,
 .info-box p {
@@ -253,19 +376,226 @@ header img {
 
 
 
+/* =================================
+   . EDIBLE PLANTS PAGE
+================================= */
+.edible-layout {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 60rem;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 0;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edible-list {
+    flex: 2;
+    min-width: 0;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.edible-card {
+    background-color: #A5CCAD;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    grid-template-areas:
+        "title image"
+        "text image";
+    gap: 0 10px;
+    align-items: start;
+}
+
+.edible-card h3 {
+    grid-area: title;
+    margin: 0;
+}
+
+.edible-card img {
+    grid-area: image;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.edible-card .edible-text {
+    grid-area: text;
+    min-width: 0;
+}
+
+.edible-card p {
+    margin-top: 0.5rem;
+    text-indent: 0;
+    padding: 0;
+}
+
+/* =================================
+   . common problems page
+================================= */
+
+.problems-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 50rem;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 0;
+}
 
 
 
-/* Contact page */
+/* =================================
+   . INDOOR GARDEN PAGE
+================================= */
+.indoor-content {
+    max-width: 650px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #A5CEAF;
+    box-sizing: border-box;
+    border: 17px white solid;
+    box-sizing: border-box;
+}
+
+
+.indoor-content h1 {
+    text-align: center;
+}
+
+.indoor-content ul {
+    padding-left: 25px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+
+/* Indoor garden alignment*/
+.indoor-content h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.indoor-content h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Align the pots section to the right */
+.indoor-content .right h2,
+.indoor-content .right p {
+    text-align: right;
+}
+
+.indoor-content .right p {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.indoor-content p {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+}
+
+/* Indoor garden photos */
+.indoor-content figure {
+    width: 454px;
+    max-width: 45%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.indoor-content figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.indoor-content .indoor-photo-left {
+    width: 550px;
+    max-width: 60%;
+}
+
+/* First photo on the left */
+.indoor-photo-left {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.indoor-photo-right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* =================================
+   7. CONTACT PAGE
+================================= */
+
 .contact-page {
     padding: 20px;
 }
 
 .contact-page h1 {
     text-align: center;
-    color: #black;
+    color: black;
     margin-bottom: 15px;
+    font-size: 35px;
 }
+
+
+/* Layout for the thank-you message and contact form */
+.contact-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 950px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Thank-you message on the left */
+.contact-message {
+    flex: 1;
+    background-color: #A5CCAD;
+    border: 5px solid #065143;
+    border-radius: 16px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.contact-message h2 {
+    color: #065143;
+    font-family: 'Gabriela', serif;
+    margin-top: 0;
+}
+
+.contact-message p {
+    color: #222;
+    line-height: 1.7;
+}
+
+
 
 .contact-intro {
     max-width: 700px;
@@ -274,25 +604,52 @@ header img {
     text-align: center;
 }
 
-/* The green form box */
-.contact-box {
-    background-color: #A5CCAD;
-    padding: 25px;
-    border-radius: 22px;
+.contact-outer-box {
+    flex: 0 1 500px;
     width: 100%;
-    max-width: 550px;
-    margin-left: 5%;
+    max-width: 500px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Form labels */
+.contact-intro-box {
+    background-color: #FFD95C;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.contact-intro-box h1 {
+    text-align: center;
+    color: black;
+    margin-top: 0;
+}
+
+.contact-intro-box p {
+    line-height: 1.6;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 70%;
+}
+
+.contact-box {
+    background-color: #A5CCAD;
+    padding: 25px;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .contact-box label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
 }
 
-/* Text fields */
 .contact-box input,
 .contact-box textarea {
     width: 100%;
@@ -302,10 +659,17 @@ header img {
     box-sizing: border-box;
 }
 
-/* Message box */
 .contact-box textarea {
     min-height: 150px;
     resize: vertical;
+}
+
+/* Border properties */
+.contact-box input,
+.contact-box textarea {
+    border-color: #174c2c;
+    border-style: solid;
+    border-width: 1px;
 }
 
 
@@ -321,7 +685,6 @@ header img {
 
 .name-fields input {
     width: 100%;
-    box-sizing: border-box;
 }
 
 .name-fields label {
@@ -329,93 +692,300 @@ header img {
     margin-bottom: 6px;
 }
 
-@media (max-width: 500px) {
-    .name-fields {
-        flex-direction: column;
-        gap: 0;
-    }
-}
-
-
-/* Submit button */
-.contact-box button {
+.contact-box input[type="submit"] {
     background-color: #315B3B;
     color: white;
-    padding: 12px 25px;
+    padding: 6px 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 13px;
+    width: auto;
+    display: block;
+    margin-left: auto;
 }
 
-.contact-box button:hover {
+.contact-box input[type="submit"]:hover {
     background-color: #24452D;
 }
 
-/* Make the form fit on smaller screens */
-@media (max-width: 600px) {
-    .contact-box {
-        margin-left: 0;
-        max-width: 100%;
+
+
+
+/* =================================
+   8. FAQ
+================================= */
+
+.contact-page > h1 {
+    text-align: center;
+    color: #000000;
+    font-family: 'Gabriela', serif;
+    margin: 2.5rem 0 1rem;
+}
+
+.faq-box {
+    width: 90%;
+    max-width: 800px;
+    margin: 1.5rem auto 3rem;
+    padding: 25px;
+    background-color: #A5CCAD;
+    border: 20px solid #62846B;
+    box-sizing: border-box;
+}
+
+.faq-item {
+    padding: 15px 10px;
+    margin: 0;
+    border-bottom: 1px solid #62846B;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h3 {
+    color: #000000;
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+}
+
+.faq-item p {
+    color: #222;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+
+/* Link after it has been visited */
+a:visited {
+    color: #37664c;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =================================
+   9. RESPONSIVE LAYOUT
+================================= */
+/* Smartphones */
+@media screen and (max-width: 768px) {
+
+    header img {
+        width: 9rem;
     }
+
+    .hero {
+    width: 100%;
+    height: 220px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Girassol', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+h2{
+    text-align: center;
+    margin-right: 30px;
+    font-family: 'Gabriela', serif;
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+header .card-button {
+    top: 10px;
+    right: 10px;
+    margin: 0;
+}
+
+    figure img {
+        height: 12rem;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 0.5rem 1rem;
+    }
+
+    .plant-layout {
+        flex-direction: column;
+    }
+
+
+
+    
+    .plant-list {
+    margin-left: 0;
+    margin-right: 0;
+}
+    .plant-list,
+    .plant-sidebar {
+        width: 100%;
+    }
+
+    .plant-card2 {
+        grid-template-columns: minmax(0, 1fr) 120px;
+        gap: 0 8px;
+    }
+    .plant-card2 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "title"
+        "text"
+        "text"
+        "image";
+}
+.plant-card2 img {
+    width: 100%;
+    max-width: 300px;
+    height: 310px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+
+
+    .edible-layout {
+    flex-direction: column;
+}
+
+.edible-list,
+.edible-sidebar {
+    width: 100%;
+}
+
+.edible-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "title"
+        "text"
+        "text"
+        "image";
+}
+
+.edible-card img {
+    width: 100%;
+    max-width: 290px;
+    height: 230px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
 
     .contact-page {
         padding: 12px;
     }
+
+    .contact-content {
+    flex-direction: column;
+    align-items: center;
 }
 
-/* The big box around EVERYTHING */
-.contact-outer-box {
-    background-color: #A5CCAD;
-    padding: 0px;
-    border-radius: 22px;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: 0;
-    box-sizing: border-box;
-}
-
-/* Heading and introduction */
-.contact-intro-box {
-    background-color: #FFD95C;
-    padding: 10px;
-    border-radius: 16px;
-}
-
-.contact-intro-box h1 {
-    text-align: center;
-    color: #000000;
-    margin-top: 0;
-}
-
-.contact-intro-box p {
-    line-height: 1.6;
-    margin-bottom: 2;
-}
-
-/* The form inside the big box */
-.contact-box {
-    background-color: #A5CCAD;
-    padding: 25px;
-    border-radius: 16px;
-    box-sizing: border-box;
-}
-
-.faq-box {
-width: 800px; 
-height: 300px; 
-background-color: #A5CCAD; 
-border: solid #62846B; 
-border-width: 70px 25px 25px 25px;
-margin-left: auto; 
-margin-right: auto; 
-}
-
-/* Responsive layout */
-@media (max-width: 600px) {
+    .contact-message,
     .contact-outer-box {
-        margin-left: 0;
-        max-width: 100%;
-        padding: 12px;
+    width: 100%;
     }
+
+    .contact-outer-box {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .name-fields p {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+.name-fields input {
+    width: 100%;
+    box-sizing: border-box;
+}
+    
+
+    .contact-box {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        padding: 16px;
+    }
+
+
+    .faq-box {
+        border-width: 35px 12px 12px;
+    }
+
+.cookie-message {
+    width: 200px;
+    max-width: 70%;
+    right: 10px;
+    bottom: 10px;
+    padding: 8px;
+    z-index: 9999;
+}
+
+.cookie-message h2 {
+    font-size: 18px;
+}
+
+.cookie-message p {
+    font-size: 12px;
+}
+}
+
+/*PC*/
+@media screen and (min-width: 768px ) 
+{
+
+h1 {
+    text-align: center;
+    font-family: 'Girassol', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+
+h2{
+    text-align: center;
+    margin-right: 30px;
+    font-family: 'Gabriela', serif;
+    text-transform: capitalize;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.cookie-message {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 280px;
+    background-color: #065143;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    z-index: 9999;
+}
+
+.cookie-message h2 {
+    margin: 0;
+    color: white;
+}
+
+.cookie-message p {
+    margin: 0 auto;
+    color: white;
+    text-indent: 0;
+}
+
 }

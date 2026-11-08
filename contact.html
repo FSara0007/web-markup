@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
     <link rel="icon" type="image/png" href="img/favicon-removebg-preview.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Andika&family=Gabriela&family=Girassol&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
@@ -17,7 +16,9 @@
                  alt="Urban Greenhouse logo"
                  title="Urban Greenhouse">
          </a>
-
+ <a href="contact.html" class="card-button">
+        Contact
+    </a>
 </header>
 <nav id = mainnav>
     <ul>
@@ -27,30 +28,60 @@
         <li><a href="indoor.html">Indoor Garden</a></li>
         <li><a href="problems.html">Common problems</a></li>
     </ul>
-
+</nav>
 
 <main class="contact-page">
 
-    <section class="contact-outer-box">
+<section class="contact-content" aria-label="Contact Page Content">
+
+        <aside class="contact-message">
+            <h2>Thank You for Visiting!</h2>
+
+            <p>
+                We’re always working to improve the website and make sure
+                you can find the information you’re looking for.
+            </p>
+
+            <p>
+                This website was made <em>by</em> plant lovers, <em>for</em> plant lovers.
+                Whether you’re just getting started or looking to learn
+                something new, we hope Urban Greenhouse helps you feel
+                more confident bringing a little more nature into your home.
+            </p>
+
+            <p>
+                Thank you for supporting Urban Greenhouse and joining us
+                on our journey!
+            </p>
+        </aside>
+
+
+    <section class="contact-outer-box" aria-label="Contact outer box">
 
         <!-- Heading and introduction -->
         <section class="contact-intro-box">
-            <h1>CONTACT US!</h1>
+            <h2>CONTACT US!</h2>
 
-            <p>
+           
+        </section>
+
+        <!-- Form -->
+         
+        <section class="contact-box" aria-label="Contact Form Information">
+             <p>
                 Do you have questions, suggestions or just want to reach out?
                 This website grows and improves thanks to the feedback of our
                 readers, so we’d love to hear from you! Fill out the form below
                 and we’ll respond within 24 hours.
             </p>
-        </section>
 
-        <!-- Form -->
-        <section class="contact-box">
             <form action="http://next-app-router-playground-kohl.vercel.app/api/contact"
                   method="post">
 
-                <section class="name-fields">
+                      <fieldset>
+        <legend>Urban Greenhouse Form</legend>
+
+                <section class="name-fields" aria-label="Name Fields">
                     <p>
                         <label for="name">First Name*:</label>
                         <input type="text" id="name" name="name"
@@ -59,7 +90,7 @@
                     </p>
 
                     <p>
-                        <label for="lastname">Last Name*:</label>
+                        <label for="lastname">Last Name:</label>
                         <input type="text" id="lastname" name="lastname"
                                required minlength="2" maxlength="50"
                                placeholder="Sims">
@@ -79,32 +110,53 @@
                               placeholder="I wanted to ask about..."></textarea>
                 </p>
 
-                <button type="submit">Submit</button>
-
+                <input type="submit" value="Submit" class="submit-button">
+    </fieldset>
             </form>
         </section>
 
     </section>
 
-
-  
-<h1>Frequently Asked Questions:</h1>
-
-    <section class="faq-box"> 
-<p>
-Q: I haven’t gotten any reply back, why is that?
-</p>
-A: We always reply withing 24 hours so if you haven’t gotten a reply, make sure you filled in the right email.
-<p>
-Q:Are you planning to add guides for more challenging plants?
-</p>
-A: For now our team is focusing of expanding our guides for beginners, but that can happen in future
-<p>
-Q: Can I request a topic for the website? 
-</p>
-A: Yes! We're always open to suggestions for new guides and topics. You can send us your idea through the contact form 
-
-
     </section>
 
+  
+<h2>Frequently Asked Questions:</h2>
+
+   
+<section class="faq-box" aria-label="Frequently Asked Questions">
+
+    <article class="faq-item">
+        <h3>Q: I haven't received a reply. Why?</h3>
+        <p>
+            We aim to reply within 24 hours. If you haven't received
+            a response, check that you entered the correct email
+            address and check your spam folder.
+        </p>
+    </article>
+
+    <article class="faq-item">
+        <h3>Q: Will you add guides for more challenging plants?</h3>
+        <p>
+            For now, we're focusing on expanding our beginner-friendly
+            guides, but we hope to cover more challenging plants
+            in the future.
+        </p>
+    </article>
+
+    <article class="faq-item">
+        <h3>Q: Can I request a topic for the website?</h3>
+        <p>
+            Yes! We're always open to suggestions for new guides
+            and topics. Send us your idea through the contact form.
+        </p>
+    </article>
+
+</section>
+
 </main>
+
+<footer>
+    <p>&copy; 2026 Urban Greenhouse. All rights reserved.</p>
+</footer>
+</body>
+</html>
